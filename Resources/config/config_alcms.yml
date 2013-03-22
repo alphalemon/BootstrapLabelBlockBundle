@@ -1,0 +1,2 @@
+imports:
+- { resource: "@BootstrapLabelBlockBundle/Resources/config/app_block.xml" }

@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-0": { "AlphaLemon\\Block\\BootstrapLabelBlockBundle": ""
+        }
+    },
+    "target-dir" : "AlphaLemon/Block/BootstrapLabelBlockBundle",
+    "minimum-stability": "dev"
+}

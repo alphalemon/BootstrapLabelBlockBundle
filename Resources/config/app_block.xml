@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="bootstrap_label_block.block.class">AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Block\AlBlockManagerBootstrapLabelBlock</parameter>
+        <parameter key="bootstrap_badge_block.block.class">AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Block\AlBlockManagerBootstrapBadgeBlock</parameter>
+        <parameter key="bootstrap_label_block.form.class">AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Form\AlLabelType</parameter>
+        <parameter key="bootstrap_badge_block.form.class">AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Form\AlBadgeType</parameter>
+    </parameters>
+
+    <services>
+        <service id="bootstrap_label_block.block" class="%bootstrap_label_block.block.class%">
+            <tag name="alphalemon_cms.blocks_factory.block" description="Label" type="BootstrapLabelBlock" group="bootstrap,Twitter Bootstrap" />
+            <argument type="service" id="service_container" />
+        </service>
+        
+        <service id="bootstrap_badge_block.block" class="%bootstrap_badge_block.block.class%">
+            <tag name="alphalemon_cms.blocks_factory.block" description="Badge" type="BootstrapBadgeBlock" group="bootstrap,Twitter Bootstrap" />
+            <argument type="service" id="service_container" />
+        </service>
+                
+        <service id="bootstrap_label_block.form" class="%bootstrap_label_block.form.class%">
+        </service>
+        
+        <service id="bootstrap_badge_block.form" class="%bootstrap_badge_block.form.class%">
+        </service>
+    </services>
+</container>
