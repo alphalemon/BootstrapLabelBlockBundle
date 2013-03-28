@@ -1,3 +1,5 @@
+{% extends "AlphaLemonCmsBundle:Editor:base_editor.html.twig" %}
+
 {% if data.badge_type is defined and data.badge_type != "" %}
 {% set badge_type = " " ~ data.badge_type %}
 {% else %}
@@ -9,6 +11,3 @@
 {% else %}
 {% set badge_text = "Label" %}
 {% endif %}
-
-{% block body %}
-{% endblock %}

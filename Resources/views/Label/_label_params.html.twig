@@ -1,3 +1,5 @@
+{% extends "AlphaLemonCmsBundle:Editor:base_editor.html.twig" %}
+
 {% if data.label_type is defined and data.label_type != "" %}
 {% set label_type = " " ~ data.label_type %}
 {% else %}
@@ -9,6 +11,3 @@
 {% else %}
 {% set label_text = "Label" %}
 {% endif %}
-
-{% block body %}
-{% endblock %}

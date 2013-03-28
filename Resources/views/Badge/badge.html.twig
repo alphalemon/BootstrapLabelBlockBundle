@@ -1,5 +1,5 @@
 {% extends 'BootstrapLabelBlockBundle:Badge:_badge_params.html.twig' %}
 
 {% block body %}
-<badge class="badge{{ badge_type }}">{{ badge_text }}</badge>
+<span class="badge{{ badge_type }}" {{ editor|raw }}>{{ badge_text }}</span>
 {% endblock %}

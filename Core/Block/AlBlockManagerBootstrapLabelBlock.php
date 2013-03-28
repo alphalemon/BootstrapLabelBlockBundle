@@ -41,17 +41,18 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
         ));
     }
     
-    protected function replaceHtmlCmsActive()
-    {
+    public function editorParameters()
+    {        
         $items = $this->decodeJsonContent($this->alBlock->getContent());
         $item = $items[0];
         
         $formClass = $this->container->get($this->formParam);
-        $labelForm = $this->container->get('form.factory')->create($formClass, $item);
+        $form = $this->container->get('form.factory')->create($formClass, $item);
         
-        return array('RenderView' => array(
-            'view' => $this->editorTemplate,
-            'options' => array('data' => $item, 'form' => $labelForm->createView()),
-        ));
+        return array(
+            "template" => $this->editorTemplate,
+            "title" => "Badge editor",
+            "form" => $form->createView(),
+        );
     }
 }
