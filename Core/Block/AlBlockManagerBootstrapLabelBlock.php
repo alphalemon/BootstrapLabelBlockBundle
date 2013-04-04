@@ -31,7 +31,7 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
         return array('Content' => $value);
     }
     
-    public function getHtml()
+    protected function renderHtml()
     {
         $items = $this->decodeJsonContent($this->alBlock->getContent());
         
