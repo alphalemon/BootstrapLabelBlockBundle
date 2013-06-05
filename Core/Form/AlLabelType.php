@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the BusinessDropCapBundle and it is distributed
+ * This file is part of the BootstrapLabelBlockBundle and it is distributed
  * under the MIT LICENSE. To use this application you must leave intact this copyright 
  * notice.
  *
@@ -14,7 +14,7 @@
  * @license    MIT LICENSE
  * 
  */
-
+ 
 namespace AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Form;
 
 use AlphaLemon\AlphaLemonCmsBundle\Core\Form\JsonBlock\JsonBlockType;
@@ -22,6 +22,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class AlLabelType extends JsonBlockType
 {
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
