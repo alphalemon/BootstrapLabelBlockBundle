@@ -1,6 +1,18 @@
 <?php
-/**
- * An AlphaLemonCms Block
+/*
+ * This file is part of the BootstrapLabelBlockBundle and it is distributed
+ * under the MIT LICENSE. To use this application you must leave intact this copyright 
+ * notice.
+ *
+ * Copyright (c) AlphaLemon <webmaster@alphalemon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * For extra documentation and help please visit http://www.alphalemon.com
+ * 
+ * @license    MIT LICENSE
+ * 
  */
 
 namespace AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Block;
@@ -8,7 +20,9 @@ namespace AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Block;
 use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJsonBlockContainer;
 
 /**
- * Description of AlBlockManagerBootstrapLabelBlock
+ * Defines the Block Manager to handle the Bootstrap Label
+ *
+ * @author AlphaLemon <webmaster@alphalemon.com>
  */
 class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
 {
@@ -16,6 +30,9 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
     protected $blockTemplate = 'BootstrapLabelBlockBundle:Label:label.html.twig';    
     protected $editorTemplate = 'BootstrapLabelBlockBundle:Editor:label_editor.html.twig';
 
+    /**
+     * {@inheritdoc}
+     */
     public function getDefaultValue()
     {
         $value = 
@@ -31,6 +48,9 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
         return array('Content' => $value);
     }
     
+    /**
+     * {@inheritdoc}
+     */
     protected function renderHtml()
     {
         $items = $this->decodeJsonContent($this->alBlock->getContent());
@@ -41,6 +61,9 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
         ));
     }
     
+    /**
+     * {@inheritdoc}
+     */
     public function editorParameters()
     {        
         $items = $this->decodeJsonContent($this->alBlock->getContent());
@@ -51,7 +74,7 @@ class AlBlockManagerBootstrapLabelBlock extends AlBlockManagerJsonBlockContainer
         
         return array(
             "template" => $this->editorTemplate,
-            "title" => "Badge editor",
+            "title" => "Bootstrap label editor",
             "form" => $form->createView(),
         );
     }
