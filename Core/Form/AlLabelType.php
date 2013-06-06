@@ -20,6 +20,11 @@ namespace AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Form;
 use AlphaLemon\AlphaLemonCmsBundle\Core\Form\JsonBlock\JsonBlockType;
 use Symfony\Component\Form\FormBuilderInterface;
 
+/**
+ * Defines the form to edit a label block
+ *
+ * @author AlphaLemon <webmaster@alphalemon.com>
+ */
 class AlLabelType extends JsonBlockType
 {
     /**

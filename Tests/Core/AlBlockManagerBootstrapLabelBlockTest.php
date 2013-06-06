@@ -20,7 +20,7 @@ namespace AlphaLemon\Block\BootstrapLabelBlockBundle\Tests\Core;
 use AlphaLemon\Block\BootstrapLabelBlockBundle\Core\Block\AlBlockManagerBootstrapLabelBlock;
 
 /**
- * Defines the Block Manager to handle the Bootstrap Lambda
+ * AlBlockManagerBootstrapLabelBlockTest
  *
  * @author AlphaLemon <webmaster@alphalemon.com>
  */
